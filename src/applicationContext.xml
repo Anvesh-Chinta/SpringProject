@@ -9,6 +9,12 @@
 
 	<!-- Define your beans here -->
 	<beans>
+		<bean id="myLoggerConfig"
+			class="com.jps.springdemo.config.MyLoggerConfig"
+			init-method="initLogger">
+			<property name="rootLoggerLevel" value="FINE" />
+			<property name="printedLoggerLevel" value="FINE" />
+		</bean>
 		<bean id="myCoach" class="com.jps.springdemo.BaseballCoach">
 		</bean>
 	</beans>
