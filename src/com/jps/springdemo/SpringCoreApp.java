@@ -15,6 +15,9 @@ public class SpringCoreApp {
 		//call the method
 		System.out.println(theCoach.getDailyWorkout());
 		
+		//lets call the method for fortunes
+		System.out.println(theCoach.getDailyFortune());
+		
 		//close the context
 		context.close();
 		

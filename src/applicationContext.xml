@@ -9,19 +9,20 @@
 
 	<!-- Define your beans here -->
 
-	<!-- Define the dependency here: method implementation -->
-	<bean id="myFortune"
-		class="com.jps.springdemo.service.DailyFortuneService">
-	</bean>
-
 	<bean id="myLoggerConfig"
 		class="com.jps.springdemo.config.MyLoggerConfig"
 		init-method="initLogger">
 		<property name="rootLoggerLevel" value="FINE" />
 		<property name="printedLoggerLevel" value="FINE" />
 	</bean>
-	<bean id="myCoach" class="com.jps.springdemo.CricketCoach">
-		
+
+	<!-- Define the dependency here: method implementation -->
+	<bean id="myFortune"
+		class="com.jps.springdemo.service.DailyFortuneService">
+	</bean>
+
+	<bean id="myCoach" class="com.jps.springdemo.TrackCoach">
+
 		<!-- set up constructor injection -->
 		<constructor-arg ref="myFortune" />
 	</bean>
