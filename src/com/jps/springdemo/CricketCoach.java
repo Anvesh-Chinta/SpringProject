@@ -9,4 +9,10 @@ public class CricketCoach implements Coach {
 		
 	}
 
+	@Override
+	public String getDailyFortune() {
+		
+		return "YOur tema shall win the mathc!";
+	}
+
 }

@@ -7,4 +7,10 @@ public class TrackCoach implements Coach {
 		return "Run for your Life";
 	}
 
+	@Override
+	public String getDailyFortune() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }
