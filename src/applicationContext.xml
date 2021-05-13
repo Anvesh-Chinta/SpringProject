@@ -43,8 +43,8 @@
 
 		<!-- inject literal values -->
 		<property name="emailAddress"
-			value="bestCricketCoach@gmail.com" />
-		<property name="team" value="Sunrisers Hyderabad" />
+			value="${ipl.email}" />
+		<property name="team" value="${ipl.team}" />
 
 	</bean>
 </beans>
