@@ -21,10 +21,22 @@
 		class="com.jps.springdemo.service.DailyFortuneService">
 	</bean>
 
+	<bean id="baseballCoach" class="com.jps.springdemo.BaseballCoach">
+
+		<!-- set up constructor injection -->
+		<constructor-arg ref="myFortune" />
+	</bean>
+	
 	<bean id="myCoach" class="com.jps.springdemo.TrackCoach">
 
 		<!-- set up constructor injection -->
 		<constructor-arg ref="myFortune" />
+	</bean>
+	
+	<bean id="myCoach" class="com.jps.springdemo.CricketCoach">
+
+		<!-- set up setter injection -->
+		<property name="fortuneService" ref="myFortune"></property>
 	</bean>
 </beans>
 

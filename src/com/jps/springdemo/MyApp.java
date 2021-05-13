@@ -2,6 +2,7 @@ package com.jps.springdemo;
 
 public class MyApp {
 
+	//Rough prototype: Traditional approach
 	public static void main(String[] args) {
 		
 		//create the object

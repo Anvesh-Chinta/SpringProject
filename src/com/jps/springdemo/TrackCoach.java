@@ -11,6 +11,7 @@ public class TrackCoach implements Coach {
 		this.fortuneService = fortuneService;
 	}
 
+	//no-arg constructor as a result to remove the error in the traditional approach(MyApp.java)
 	public TrackCoach() {
 		
 	}
