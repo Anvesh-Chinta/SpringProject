@@ -11,6 +11,10 @@ public class TrackCoach implements Coach {
 		this.fortuneService = fortuneService;
 	}
 
+	public TrackCoach() {
+		
+	}
+
 	@Override
 	public String getDailyWorkout() {
 		return "Run for your Life";
