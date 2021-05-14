@@ -22,7 +22,8 @@
 	</bean>
 
 	<!-- default scope for track coach is singleton -->
-	<bean id="myCoach" class="com.jps.springdemo.TrackCoach">
+	<bean id="myCoach" class="com.jps.springdemo.TrackCoach"
+	scope="prototype">
 
 		<!-- set up constructor injection -->
 		<constructor-arg ref="myFortune" />
