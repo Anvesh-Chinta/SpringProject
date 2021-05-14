@@ -5,6 +5,20 @@ import org.springframework.stereotype.Component;
 @Component
 public class SoccerCoach implements Coach {
 
+	private FortuneService fortuneService;
+	
+	//define a default constructor
+	public SoccerCoach() {
+		System.out.println(">>TennisCoach: inside default constructor");
+	}
+	
+	//define a setter method
+	public void setFortuneService(FortuneService fortuneService) {
+	
+		this.fortuneService = fortuneService;
+	
+	}
+	
 	@Override
 	public String getDailyWorkout() {
 		
@@ -14,8 +28,9 @@ public class SoccerCoach implements Coach {
 
 	@Override
 	public String getDailyFortune() {
-		// TODO Auto-generated method stub
-		return null;
+	
+		return fortuneService.getFortune();
+		
 	}
 
 }
