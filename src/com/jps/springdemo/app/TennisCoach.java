@@ -1,5 +1,6 @@
 package com.jps.springdemo.app;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -7,8 +8,9 @@ public class TennisCoach implements Coach {
 
 	private FortuneService fortuneService;
 	
-	//create constructor
+	//Create a constructor in your class for injections
 	
+	@Autowired
 	public TennisCoach(FortuneService theFortuneService) {
 		
 		this.fortuneService = theFortuneService;
