@@ -13,6 +13,7 @@ public class SetterDemoApp {
 		CricketCoach theCoach = context.getBean("myCricketCoach", CricketCoach.class);
 		
 		System.out.println("Diagnostic messages end here...");
+		
 		//call methods on the bean
 		System.out.println(theCoach.getDailyWorkout());
 	
@@ -21,6 +22,7 @@ public class SetterDemoApp {
 		System.out.println(theCoach.getEmailAddress());
 		
 		System.out.println(theCoach.getTeam());
+		
 		//close the context
 		context.close();
 	}
