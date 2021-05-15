@@ -1,5 +1,6 @@
 package com.jps.springdemo.app;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -9,12 +10,13 @@ public class SoccerCoach implements Coach {
 	
 	//define a default constructor
 	public SoccerCoach() {
-		System.out.println(">>TennisCoach: inside default constructor");
+		System.out.println(">>soccerCoach: inside default constructor");
 	}
 	
 	//define a setter method
+	@Autowired
 	public void setFortuneService(FortuneService fortuneService) {
-	
+		System.out.println(">>soccerCoach: inside setFortuneService() method");
 		this.fortuneService = fortuneService;
 	
 	}
