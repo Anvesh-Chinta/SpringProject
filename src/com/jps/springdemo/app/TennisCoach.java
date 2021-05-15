@@ -1,27 +1,28 @@
 package com.jps.springdemo.app;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component
 public class TennisCoach implements Coach {
 
-	private FortuneService fortuneService;
-	
-	//Create a constructor in your class for injections
-	
 	@Autowired
-	public TennisCoach(FortuneService theFortuneService) {
+	@Qualifier("happyFortuneService")
+	private FortuneService fortuneService;
+
+	// Create a constructor in your class for injections
+	public TennisCoach() {
 		
-		this.fortuneService = theFortuneService;
+		System.out.println(">>TennisCoach: default constructor");
 	
 	}
-	
+
 	@Override
 	public String getDailyWorkout() {
 
 		return "Practice your backhand volley!";
-		
+
 	}
 
 	@Override
@@ -30,5 +31,5 @@ public class TennisCoach implements Coach {
 		return fortuneService.getFortune();
 
 	}
-	
+
 }
