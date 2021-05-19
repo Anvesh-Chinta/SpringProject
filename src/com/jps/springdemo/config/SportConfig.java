@@ -10,7 +10,7 @@ import com.jps.springdemo.app.SadFortuneService;
 import com.jps.springdemo.app.SwimCoach;
 
 @Configuration
-@ComponentScan("com.jps.springdemo")
+//@ComponentScan("com.jps.springdemo")
 public class SportConfig {
 
 	//define bean  for our sad fortune service
