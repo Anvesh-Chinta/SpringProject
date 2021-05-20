@@ -2,27 +2,21 @@ package com.jps.springdemo.app;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.PropertySource;
 
 @Configuration
-//@ComponentScan("com.jps.springdemo")
-@PropertySource("classpath:sport.properties")
-public class SportConfig {
-
-	//define bean  for our sad fortune service
+class SportConfig{
+	
 	@Bean
-	public FortuneService sadFortuneService() {
+	public FortuneService seriousFortuneService() {
 		
-		return new SadFortuneService();
-		
+		return new SeriousFortuneService();
+				
 	}
 	
-	//define bean for our swim coach and inject dependency
 	@Bean
-	public Coach swimCoach() {
+	public Coach archeryCoach() {
 		
-		return new SwimCoach(sadFortuneService());
+		return new ArcheryCoach(seriousFortuneService());
 		
 	}
-	
 }

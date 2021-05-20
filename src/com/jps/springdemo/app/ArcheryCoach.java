@@ -7,6 +7,12 @@ public class ArcheryCoach implements Coach {
 
 	private FortuneService fortuneService;
 	
+	public ArcheryCoach(FortuneService theFortuneService) {
+
+		this.fortuneService = theFortuneService;
+		
+	}
+
 	@Override
 	public String getDailyWorkout() {
 		
