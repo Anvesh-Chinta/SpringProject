@@ -1,9 +1,18 @@
 package com.jps.springdemo.app;
 
+import org.springframework.beans.factory.annotation.Value;
+
 public class SwimCoach implements Coach {
 
 	//dependency injection - using constructor method
 	private FortuneService fortuneService;
+	
+	@Value("${olympics.email}")
+	private String email;
+	
+	@Value("${olympics.team}")
+	private String team;
+	
 	
 	public SwimCoach(FortuneService theFortuneService) {
 		
@@ -23,5 +32,13 @@ public class SwimCoach implements Coach {
 		return fortuneService.getFortune();
 		
 	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public String getTeam() {
+		return team;
+	}	
 
 }
