@@ -5,6 +5,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class ArcheryCoach implements Coach {
 
+	private FortuneService fortuneService;
 	
 	@Override
 	public String getDailyWorkout() {
@@ -15,7 +16,8 @@ public class ArcheryCoach implements Coach {
 	@Override
 	public String getDailyFortune() {
 		
-		return null;
+		return fortuneService.getFortune();
+		
 	}
 
 }
